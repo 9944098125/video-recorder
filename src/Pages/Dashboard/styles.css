@@ -1,0 +1,22 @@
+.record-video-button {
+	height: 55px;
+	width: 150px;
+	background-color: rgb(0, 255, 234);
+	box-shadow: 1px -1px 1px -1px grey;
+	border-radius: 9px;
+	border: none;
+	outline: none;
+	color: rgb(0, 57, 57);
+	font-weight: 600;
+}
+.create-project-button {
+	height: 55px;
+	width: 150px;
+	background-color: rgb(0, 255, 234);
+	box-shadow: 1px -1px 1px -1px grey;
+	border-radius: 9px;
+	border: none;
+	outline: none;
+	color: rgb(0, 57, 57);
+	font-weight: 600;
+}
