@@ -1,0 +1,50 @@
+.toolbar-container {
+	width: 25%;
+	box-shadow: 1px -1px 1px -1px grey;
+}
+.seekBar {
+	width: 100%;
+	box-shadow: -1px 1px -2px 1px grey;
+	position: fixed;
+	bottom: 0;
+	left: 70px;
+	height: 17vh;
+	padding-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.toolbar-icons {
+	height: 100px;
+	width: 50%;
+	border-radius: 9px;
+	box-shadow: 1px -1px 1px -1px grey;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.new-container {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	background-color: rgb(180, 248, 230);
+	padding: 2px 4px;
+	border-radius: 4px;
+	color: rgb(0, 112, 78);
+	font-weight: 800;
+}
+.lower-cards {
+	box-shadow: 1px -1px 1px -1px grey;
+	border-radius: 4px;
+}
+#toolbar-side::-webkit-scrollbar {
+	display: none;
+}
+.stock-videos {
+	position: relative;
+	font-weight: 500;
+}
+#stockVideos::-webkit-scrollbar {
+	display: none;
+}

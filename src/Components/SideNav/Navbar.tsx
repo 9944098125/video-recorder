@@ -4,7 +4,7 @@ import { RxAvatar } from "react-icons/rx";
 const Navbar = () => {
 	return (
 		<React.Fragment>
-			<div className="navbar px-5">
+			<div className="navbar">
 				<input
 					type="search"
 					placeholder="search"

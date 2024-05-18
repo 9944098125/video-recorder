@@ -6,3 +6,38 @@ body {
 	padding: 0 0;
 	font-family: "Poppins", sans-serif;
 }
+.create-button {
+	background-color: white;
+	border: none;
+	outline: none;
+	width: 200px;
+	border-radius: 9px;
+	box-shadow: 1px 1px 1px 1px rgb(103, 1, 126);
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+
+.record-button {
+	background-color: white;
+	border: none;
+	outline: none;
+	width: 200px;
+	border-radius: 9px;
+	box-shadow: 1px 1px 1px 1px rgb(0, 129, 121);
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+
+.create-button:hover,
+.record-button:hover {
+	transition: ease-in 0.2s;
+	height: 55px;
+	width: 205px;
+}
+#startRecording:hover {
+	border: 1px solid rgb(23, 186, 240);
+	border-radius: 9px;
+	padding: 4px 10px;
+}

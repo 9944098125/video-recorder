@@ -1,57 +1,51 @@
-import React, { useState } from "react";
-import VideoUploader from "../../Components/VideoUploader";
-import VideoRecorder from "../../Components/VideoRecorder";
-import SoundEffects from "../../Components/SoundEffects";
-import VideoEditorTools from "../../Components/VideoEditorTools";
+import React from "react";
+import VideoModal from "../../Components/VideoModal";
+import Toolbar from "./Toolbar";
+import { BsPhoneLandscapeFill } from "react-icons/bs";
+
+import "./styles.css";
+import SeekBar from "../../Components/ToolbarParts/seekbar";
+import { FaCircle } from "react-icons/fa";
+import { FaTurnDown } from "react-icons/fa6";
 
 const VideoEditor = () => {
-	const [videoURL, setVideoURL] = useState<string | null>(null);
-	const [videoFile, setVideoFile] = useState<File | null>(null);
-
-	const handleVideoUpload = (file: File) => {
-		const url = URL.createObjectURL(file);
-		setVideoURL(url);
-		setVideoFile(file);
-	};
-
-	const handleVideoRecord = (url: string, file: Blob) => {
-		setVideoURL(url);
-		setVideoFile(
-			new File([file], "recorded_video.webm", { type: "video/webm" })
-		);
-	};
+	const [showModal, setShowModal] = React.useState(true);
 
 	return (
-		<div>
-			<h1>Video Editor</h1>
-			<div>
-				<button
-					onClick={() => document.getElementById("video-uploader")?.click()}>
-					Upload Video
-				</button>
-				<button
-					onClick={() => document.getElementById("video-recorder")?.click()}>
-					Record Video
-				</button>
-			</div>
-			<div>
-				<VideoUploader id="video-uploader" onUpload={handleVideoUpload} />
-				<VideoRecorder id="video-recorder" onRecord={handleVideoRecord} />
-			</div>
-			{videoURL && (
-				<>
-					<div>
-						<video
-							style={{ height: "400px", width: "600px" }}
-							src={videoURL}
-							controls
-						/>
+		<React.Fragment>
+			<VideoModal showModal={showModal} setShowModal={setShowModal} />
+			<div className="d-flex">
+				<div className="toolbar-container">
+					<Toolbar />
+				</div>
+				<div>
+					<div className="p-5 d-flex align-items-center justify-content-center flex-column">
+						<div style={{ height: "400px", width: "100%" }} className="">
+							<video
+								style={{ height: "100%", width: "100%" }}
+								src=""
+								className="bg-black rounded"></video>
+						</div>
+						<div
+							style={{ cursor: "pointer" }}
+							className="d-flex align-items-center gap-4">
+							<div className="d-flex align-items-center gap-2 p-4">
+								<BsPhoneLandscapeFill fontSize={15} color="grey" />
+								<p className="text-secondary fw-bold fs-6 m-0">Landscape</p>
+								<FaTurnDown fontSize={15} color="grey" />
+							</div>
+							<div className="d-flex align-items-center gap-2 p-4">
+								<FaCircle fontSize={15} color="black" />
+								<p className="text-secondary fw-bold fs-6 m-0">Background</p>
+							</div>
+						</div>
 					</div>
-					<SoundEffects videoFile={videoFile} />
-					<VideoEditorTools videoFile={videoFile} />
-				</>
-			)}
-		</div>
+					<div className="seekBar">
+						<SeekBar />
+					</div>
+				</div>
+			</div>
+		</React.Fragment>
 	);
 };
 
