@@ -25,3 +25,5 @@ const Item = (props: ItemProps) => {
 };
 
 export default Item;
+
+// each item in the recording options
