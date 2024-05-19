@@ -5,11 +5,80 @@
 	box-shadow: 1px -1px 1px -1px grey;
 	border-radius: 4px;
 }
-.seekBar-tools {
+
+.video-editor {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	right: 0;
+	box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+	padding: 20px 150px;
+}
+
+.edit-tools {
 	position: absolute;
-	top: 20px;
-	left: 20px;
+	top: 15px;
+	left: 100px;
 	display: flex;
 	align-items: center;
 	gap: 25px;
+	cursor: pointer;
+}
+
+.controls {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.play-pause-btn {
+	background: none;
+	border: none;
+	font-size: 24px;
+	cursor: pointer;
+	margin-right: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.seek-bar {
+	flex: 1;
+	-webkit-appearance: none;
+	appearance: none;
+	height: 10px;
+	border-radius: 5px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+	transition: opacity 0.2s;
+	margin-right: 10px;
+}
+
+.seek-bar:hover {
+	opacity: 1;
+}
+
+.seek-bar::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #4caf50;
+	cursor: pointer;
+	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.seek-bar::-moz-range-thumb {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #4caf50;
+	cursor: pointer;
+	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.time {
+	font-size: 14px;
 }

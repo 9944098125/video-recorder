@@ -4,9 +4,9 @@ import Toolbar from "./Toolbar";
 import { BsPhoneLandscapeFill } from "react-icons/bs";
 
 import "./styles.css";
-import SeekBar from "../../Components/ToolbarParts/seekbar";
 import { FaCircle } from "react-icons/fa";
 import { FaTurnDown } from "react-icons/fa6";
+import SeekBar from "../../Components/ToolbarParts/SeekBar";
 
 const VideoEditor = () => {
 	const [showModal, setShowModal] = React.useState(true);
